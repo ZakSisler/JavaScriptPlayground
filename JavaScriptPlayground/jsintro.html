@@ -122,12 +122,35 @@
 
                 <!-- 2. Button to click that will call the function -->
                 <div>
-                    <input type="button" class="btn btn-success" value="Show Message" onclick="displayFavoriteColor"/>
+                    <input type="button" class="btn btn-success" value="Show Message" onclick="displayFavoriteColor()"/>
                 </div>
 
                 <!-- 3. Element to output the result (AKA output element) -->
                 <span id="color-message"></span>
 
+            </article>
+
+            <article class="col-md-4">
+
+                <h2>Water Weight</h2>
+                <p>
+                    Assume a gallon of water  weighs 8.33lbs. Allow user to enter a number of gallons. Upon clicking a button, call a funtion to calculate the total weight and display that value.
+                </p>
+                <!-- user input (textbox)-->
+                <div>
+                    <input type="number" class="form-control"placeholder="# of Gallons" id="tbNbrGallons"/>
+                </div>
+
+                <!-- way to call the function (button) -->
+                <div>
+                    <!--<input type="button" class="btn btn-primary" value="Calculate Weight" onclick="calcWaterWeight()" />-->
+                    <input type="button" class="btn btn-primary" value="Calculate Weight" id="btnCalcWeight" />
+                </div>
+
+                <!-- output element -->
+                <div id="weight-result">
+
+                </div>
 
             </article>
 

@@ -86,3 +86,24 @@ function displayFavoriteColor() {
     //Use JS to add inline styling to the <span>
     colorMessage.style.backgroundColor = userFavoriteColor;
 }
+
+//Create a function that's called when a user submits a number of gallons.
+//Calculate the weight in pounds and output the result.
+
+function calcWaterWeight() {
+    //Access the user input
+    let nbrGallons = document.getElementById('tbNbrGallons').value;//REMEMBER .VALUE!!!
+
+    //Access the output element
+    let weightResult = document.getElementById('weight-result');
+
+    //Display total weight
+    weightResult.textContent = nbrGallons + ' gallons of water weighs ' + (nbrGallons * 8.33).toFixed(2) + 'lbs';
+}
+
+//Event listeners can be used to wire up functions to events, similar to the onclick attribute.
+//Here we have removed the onclick attribute from the button in our html and will use an event listener instead
+let btnCalcWeight = document.getElementById('btnCalcWeight');
+btnCalcWeight.addEventListener('click', calcWaterWeight);//calcWaterWeight doesn't need () here (event listener)
+//When using onclick you must use the parens () at the end of the function name
+//& using event listener, do not use the parens () at the end of the function name
