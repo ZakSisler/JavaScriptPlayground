@@ -92,7 +92,46 @@
     <!--Main Content-->
     <main class="container">
         
-        
+        <!-- div class:"row" denotes the <div> will have 12 columns -->
+        <div class="row">
+
+            <!-- class="col-md-4" denotes that this element will be alotted 4 columns of space -->
+            <article class="col-md-4">
+                ,<h2>Arrays</h2>
+                <strong id="yourcolor"></strong>
+                <p>
+                    The color displayed above was selected for you from an array.
+                </p>
+            </article>
+
+            <article class="col-md-4">
+                <h2>Functions</h2>
+                <p>
+                    Functions can be written in JS and called upon in reaction to an event.
+                    Allow the user to enter a color.
+                    When they click on a button (event), call a function that will display a message and the user's input.
+                </p>
+
+                <!-- 3 Key pieces for working with input/output in JS -->
+                <!-- WE NEED THE FOLLOWING: -->
+
+                <!-- 1. Textbox for user input -->
+                <div>
+                    <input type="text" class="form-control" placeholder="Favorite Color" id="tbFavColor"/>
+                </div>
+
+                <!-- 2. Button to click that will call the function -->
+                <div>
+                    <input type="button" class="btn btn-success" value="Show Message" onclick="displayFavoriteColor"/>
+                </div>
+
+                <!-- 3. Element to output the result (AKA output element) -->
+                <span id="color-message"></span>
+
+
+            </article>
+
+        </div>
 
     </main>
     <!--/Main Content-->
@@ -100,7 +139,7 @@
     <nav class="navbar navbar-default navbar-fixed-bottom">
         <div class="container">
             <p class="navbar-text pull-left">
-                &copy; 2022 - Zakary Sisler
+                &copy; <span id="copyright"></span> 2022 - Zakary Sisler
             </p>
             <a href="#" class="btn navbar-btn btn-danger pull-right">
                 Go to the top!
@@ -112,5 +151,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap 3.3.7 minified JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+
+
 </body>
 </html>
