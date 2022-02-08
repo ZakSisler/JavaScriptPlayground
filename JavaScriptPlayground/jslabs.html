@@ -7,15 +7,15 @@
     <meta name="Author" content="Zakary Sisler" />
     <meta name="keywords" content="JavaScript Playground, JS, Introduction to JavaScript, JavaScript Fundamentals" />
     <meta name="Intro to JavaScript" content="A demo site to learn JavaScript at Centriq Training.  Includes information about JavaScript, jQuery, and jQuery Plugins" />
-    <title>Home | JavaScript Playground</title>
+    <title>Home | JS Labs</title>
 
     <!-- Bootstrap Theme -->
     <link href="css/bootstrap-flatly-theme.min.css" rel="stylesheet" />
 
     <!--Custom CSS-->
     <link href="css/custom.css" rel="stylesheet" />
-	
-	<!--Favicon-->
+
+    <!--Favicon-->
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -54,7 +54,7 @@
                     <span class="glyphicon glyphicon-home"></span> Home
                 </a>
             </li>
-            <li class="active">
+            <li>
                 <a href="jsintro.html">
                     JavaScript
                 </a>
@@ -78,7 +78,7 @@
                 </a>
 
                 <ul class="dropdown-menu">
-                    <li>
+                    <li class="active">
                         <a href="jslabs.html">
                             JavaScript
                         </a>
@@ -103,124 +103,61 @@
     <!--Page Header-->
     <div class="jumbotron">
         <div class="container">
-            <h1>Introduction to JavaScript</h1>
+            <h1>JavaScript Labs</h1>
         </div>
     </div>
     <!--/Page Header-->
     <!--Main Content-->
     <main class="container">
-        
-        <!-- div class:"row" denotes the <div> will have 12 columns -->
+
         <div class="row">
-
-            <!-- class="col-md-4" denotes that this element will be alotted 4 columns of space -->
             <article class="col-md-4">
-                ,<h2>Arrays</h2>
-                <strong id="yourcolor"></strong>
+                <h2>Mad Libs</h2>
                 <p>
-                    The color displayed above was selected for you from an array.
+                    Madlib Generator!
                 </p>
-            </article>
-
-            <article class="col-md-4">
-                <h2>Functions</h2>
-                <p>
-                    Functions can be written in JS and called upon in reaction to an event.
-                    Allow the user to enter a color.
-                    When they click on a button (event), call a function that will display a message and the user's input.
-                </p>
-
-                <!-- 3 Key pieces for working with input/output in JS -->
-                <!-- WE NEED THE FOLLOWING: -->
-
-                <!-- 1. Textbox for user input -->
+                <!-- Except user input -->
                 <div>
-                    <input type="text" class="form-control" placeholder="Favorite Color" id="tbFavColor"/>
+                    <input type="text" class="form-control" placeholder="Insert a foreign country here" id="tbForeignCountry"/>
+                    <input type="text" class="form-control" placeholder="Insert an adjective here" id="tbAdjective"/>
+                    <input type="text" class="form-control" placeholder="Insert an animal here" id="tbAnimal"/>
+                    <input type="text" class="form-control" placeholder="Insert a verb here" id="tbVerb"/>
+                    <input type="text" class="form-control" placeholder="Insert a place here" id="tbPlace"/>
+                    <input type="text" class="form-control" placeholder="Insert a type of liquid here" id="tbLiquid"/>
                 </div>
 
-                <!-- 2. Button to click that will call the function -->
+                <!-- output button -->
                 <div>
-                    <input type="button" class="btn btn-success" value="Show Message" onclick="displayFavoriteColor()"/>
+                    <input type="button" class="btn btn-danger" value="Create Madlib" onclick="createMadLib()"/>
                 </div>
-
-                <!-- 3. Element to output the result (AKA output element) -->
-                <span id="color-message"></span>
-
-            </article>
-
-            <article class="col-md-4">
-
-                <h2>Water Weight</h2>
-                <p>
-                    Assume a gallon of water  weighs 8.33lbs. Allow user to enter a number of gallons. Upon clicking a button, call a funtion to calculate the total weight and display that value.
-                </p>
-                <!-- user input (textbox)-->
-                <div>
-                    <input type="number" class="form-control"placeholder="# of Gallons" id="tbNbrGallons"/>
-                </div>
-
-                <!-- way to call the function (button) -->
-                <div>
-                    <!--<input type="button" class="btn btn-primary" value="Calculate Weight" onclick="calcWaterWeight()" />-->
-                    <input type="button" class="btn btn-primary" value="Calculate Weight" id="btnCalcWeight" />
-                </div>
-
                 <!-- output element -->
-                <div id="weight-result">
-
-                </div>
+                <span id="mad-lib"></span>
 
             </article>
-
-        </div>
-
-        <div class="row">
-
             <article class="col-md-4">
-                <h2>Single Milestone</h2>
+                <h2>Multiples of Seven Calculator</h2>
                 <p>
-                    Allow user to enter their age. They click a button, a function is called that uses a switch that determines if they have milestones coming up.
+                    Display multiples of 7 (1-30).
                 </p>
-                <!-- User input -->
                 <div>
-                    <input type="number" class="form-control" placeholder="Enter Your Age" id="tbUserAgeSingleMilestone"/>
+                    <input type="button" class="btn btn-warning" value="Multiple of 7 Calculator" onclick="displaySeven()"/>
                 </div>
-                <!-- Button -->
-                <input type="button" class="btn btn-warning" value="Switch Milestone" id="btnSingleMilestone" />
-
-                <!-- Output Element -->
-                <span id="single-milestone"/>
-
+                <span id="multiple-seven"></span>
 
             </article>
-            
-            <article class="col-md-4">
-                <h2>Loops</h2>
+            <article class="col-md-4"><!-- Start here -->
+                <h2>Celsius Converter</h2>
                 <p>
-                    Looping also exists in JS. Use a for loop to display 1-10.
+                    Celsius Converter to Fahrenheit.
                 </p>
-                <span id="loop-to-ten"></span>
-            </article>
-            
-            <article class="col-md-4">
-                <h2>Multiple Milestones</h2>
-                <p>
-                    Allow user to enter their age. When they click a button, call a function that uses if/else to display all milestones they have reached.
-                </p>
-                <!-- Text box -->
                 <div>
-                    <input type="number" class="form-control" placeholder="Age here" id="tbUserAgeMultiMilestone"/>
+                    <input type="number" class="form-control" placeholder="Insert Celsius Temperature here." id="tbUserTemp"/>
                 </div>
-
-                <!-- Call a function button -->
                 <div>
-                    <input type="button" class="btn btn-danger" value="Multiple Milestones" id="btnMultiMilestones"/>
+                    <input typeof="button" class="btn btn-success" value="Convert to Fahrenheit" onclick="convertToF()"/>
                 </div>
-
-                <!-- Output element -->
-                <span id="multiple-milestones"></span>
+                <span id="display-f"></span>
             </article>
-
         </div>
 
     </main>
@@ -237,7 +174,6 @@
         </div>
     </nav>
     <!--/Footer-->
-
     <!-- Admin Button -->
     <div id="admin-btn" class="button" onclick="openAdminNav()">
         <span class="vertical-text">ADMIN</span>
@@ -249,7 +185,7 @@
         <a href="#">Users Admin</a>
         <a href="#">Roles Admin</a>
     </div>
-    
+
     <!-- Toggle Admin Menu -->
     <script type="text/javascript">
         function openAdminNav() {
@@ -271,7 +207,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <script src="js/labcode.js"></script>
 
     <script>
         function toggleNav() {
