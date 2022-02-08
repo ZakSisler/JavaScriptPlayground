@@ -30,7 +30,22 @@
     <!--Collapsible nav-->
     <nav class="navbar-default navbar-fixed-top">
         <a href="index.html" class="navbar-brand">JavaScript Playground</a>
-        <ul class="topnav">
+    <!-- 5 Things Needed For Responsive Web Design
+        1) Viewport MetaTag
+        2) Width as a%
+        3) Font sizes set as em (except for)
+        4) Media queries (break points)
+        5) Javascripts Tweaks (Typically for interactivty - hamburger menu, side navs etc)
+        
+        
+        -->
+
+    <a href="javascript:void(0)" class="pull-right" onclick="toggleNav()" id="menu-btn">
+        &#9776;
+    </a>
+
+
+        <ul id="nav-list"  ="topnav">
             <li>
                 <a href="index.html">
                     <span class="glyphicon glyphicon-home"></span> Home
@@ -156,6 +171,55 @@
 
         </div>
 
+        <div class="row">
+
+            <article class="col-md-4">
+                <h2>Single Milestone</h2>
+                <p>
+                    Allow user to enter their age. They click a button, a function is called that uses a switch that determines if they have milestones coming up.
+                </p>
+                <!-- User input -->
+                <div>
+                    <input type="number" class="form-control" placeholder="Enter Your Age" id="tbUserAgeSingleMilestone"/>
+                </div>
+                <!-- Button -->
+                <input type="button" class="btn btn-warning" value="Switch Milestone" id="btnSingleMilestone" />
+
+                <!-- Output Element -->
+                <span id="single-milestone"/>
+
+
+            </article>
+            
+            <article class="col-md-4">
+                <h2>Loops</h2>
+                <p>
+                    Looping also exists in JS. Use a for loop to display 1-10.
+                </p>
+                <span id="loop-to-ten"></span>
+            </article>
+            
+            <article class="col-md-4">
+                <h2>Multiple Milestones</h2>
+                <p>
+                    Allow user to enter their age. When they click a button, call a function that uses if/else to display all milestones they have reached.
+                </p>
+                <!-- Text box -->
+                <div>
+                    <input type="number" class="form-control" placeholder="Age here" id="tbUserAgeMultiMilestone"/>
+                </div>
+
+                <!-- Call a function button -->
+                <div>
+                    <input type="button" class="btn btn-danger" value="Multiple Milestones" id="btnMultiMilestones"/>
+                </div>
+
+                <!-- Output element -->
+                <span id="multiple-milestones"></span>
+            </article>
+
+        </div>
+
     </main>
     <!--/Main Content-->
     <!--Footer-->
@@ -178,7 +242,12 @@
     <!-- Custom JS -->
     <script src="js/main.js"></script>
 
-
+    <script>
+        function toggleNav() {
+            let navList = document.getElementById('nav-list');
+            navList.classList.toggle('expanded');
+        }
+    </script>
 
 </body>
 </html>

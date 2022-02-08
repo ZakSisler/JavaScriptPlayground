@@ -33,7 +33,7 @@ console.log(currentYear + '-- current year');
 
 //Use value of currentYear as the <span id="copyright"> content
 //How? Create a variable to capture the span from the HTML document
-let copyright = document.getElementById('copyright'); 
+let copyright = document.getElementById('copyright');
 
 console.log(copyright);
 
@@ -107,3 +107,105 @@ let btnCalcWeight = document.getElementById('btnCalcWeight');
 btnCalcWeight.addEventListener('click', calcWaterWeight);//calcWaterWeight doesn't need () here (event listener)
 //When using onclick you must use the parens () at the end of the function name
 //& using event listener, do not use the parens () at the end of the function name
+
+//////////////////Looping/////////////////////////////////////////////////////////////////
+//Syntax is the same as C# for: for, while, do while (no for each)
+//Use a for loop to display 1-10
+
+let loopToTen = document.getElementById('loop-to-ten');
+
+for (var i = 1; i <= 10; i++) {
+
+    //.textContent escapes any HTML characters and prints them as plain text
+    //To render HTML, we can use .innerHTML
+    //.innerHTML is a potential security risk -- dont render HTML unless you have control over the content
+    loopToTen.innerHTML += i + '<br/>'
+}
+
+///////////////Branching Logic/////////////////////////////////////////////////////////////
+//Syntax is the same for if, if else, and switch
+//Create a function that uses a switch to check for milestones.
+function showSingleMilestone() {
+
+    //User input
+    let userAge = document.getElementById('tbUserAgeSingleMilestone').value;
+
+    //Output element
+    let singleMilestone = document.getElementById('single-milestone');
+
+    //switch to check user age and print message respectively
+    switch (userAge) {
+
+        case "13":
+            singleMilestone.innerHTML = "You are now a <strong>teenager</strong>!";
+            break;
+        case "18":
+            singleMilestone.innerHTML = "You are <em>technically</em> an adult.";
+            break;
+        case "25":
+            singleMilestone.innerHTML = "You can <strong>rent</strong> a car!";
+            break;
+        case "55":
+            singleMilestone.innerHTML = "You're <em>old</em>";
+            break;
+        default:
+            singleMilestone.innerHTML = "<em>Sorry. Nothing for you</em>"
+            break;
+    }
+
+}
+//Event listener to call the milestone function
+//Event listeners must be outside of the function they want to call
+let btnSingleMilestone = document.getElementById('btnSingleMilestone');
+btnSingleMilestone.addEventListener('click', showSingleMilestone);
+
+//function that uses if/else to display multiple milestones
+function showMultipleMilestones() {
+    //user input
+    let userAge = document.getElementById('tbUserAgeMultiMilestone').value;
+
+    //output element
+    let multipleMilestones = document.getElementById('multiple-milestones');
+
+    //If statements to check for milestones and add them to a list
+    let listOfMilestones = "<ul>";
+
+    if (userAge >= 55) {
+        listOfMilestones += "<li>You're <em>old</em>!</li>";
+    }
+    if (userAge >= 25) {
+        listOfMilestones += "<li>You can <strong>rent</strong> a car!</li>";
+    }
+    if (userAge >= 18) {
+        listOfMilestones += "<li>You are <em>technically</em> an adult.</li>";
+    }
+    if (userAge >= 13) {
+        listOfMilestones += "<li>You are now a <strong>teenager</strong>!</li>";
+    }
+    if (userAge < 13) {
+        listOfMilestones += "<li>Sorry, you are not a winner.</li>";
+    }
+    listOfMilestones += "</ul>";
+
+    multipleMilestones.innerHTML = listOfMilestones;
+
+}
+
+let btnMultiMilestones = document.getElementById('btnMultiMilestones');
+btnMultiMilestones.addEventListener('click', showMultipleMilestones);
+
+//Add an event listener to the input (textbox)
+//Listen for keyup and then test to see if the key they pressed was enter (keycode 13)
+
+document.getElementById('tbUserAgeMultiMilestone').addEventListener('keyup', function (event) {
+
+    //The event parameter for the anonymous function above is accepting all of the information about the event that occured in the DOM.
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        showMultipleMilestones();
+
+    }
+
+
+});
+
