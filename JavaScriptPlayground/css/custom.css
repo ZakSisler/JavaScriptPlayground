@@ -174,5 +174,40 @@ nav a.pull-right {
     font-weight: bold;
 }
 
+/*************************************
+               Custom Lightbox
+*************************************/
 
+.thumb {
+    cursor: pointer;
+}
 
+#lightbox-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.8);
+    text-align: center;
+    padding-top: 65px;
+    display: none;
+}
+
+#lightbox-container p {
+    color: #fff;
+}
+
+#lightbox-content img {
+    border: 10px solid gray;
+    margin: auto;
+}
+
+/*************************************
+               Form Validation
+*************************************/
+
+.invalid {
+    color: red;
+    font-style: italic;
+}

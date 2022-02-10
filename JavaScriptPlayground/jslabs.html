@@ -118,17 +118,17 @@
                 </p>
                 <!-- Except user input -->
                 <div>
-                    <input type="text" class="form-control" placeholder="Insert a foreign country here" id="tbForeignCountry"/>
-                    <input type="text" class="form-control" placeholder="Insert an adjective here" id="tbAdjective"/>
-                    <input type="text" class="form-control" placeholder="Insert an animal here" id="tbAnimal"/>
-                    <input type="text" class="form-control" placeholder="Insert a verb here" id="tbVerb"/>
-                    <input type="text" class="form-control" placeholder="Insert a place here" id="tbPlace"/>
-                    <input type="text" class="form-control" placeholder="Insert a type of liquid here" id="tbLiquid"/>
+                    <input type="text" class="form-control" placeholder="Insert a foreign country here" id="tbForeignCountry" />
+                    <input type="text" class="form-control" placeholder="Insert an adjective here" id="tbAdjective" />
+                    <input type="text" class="form-control" placeholder="Insert an animal here" id="tbAnimal" />
+                    <input type="text" class="form-control" placeholder="Insert a verb here" id="tbVerb" />
+                    <input type="text" class="form-control" placeholder="Insert a place here" id="tbPlace" />
+                    <input type="text" class="form-control" placeholder="Insert a type of liquid here" id="tbLiquid" />
                 </div>
 
                 <!-- output button -->
                 <div>
-                    <input type="button" class="btn btn-danger" value="Create Madlib" onclick="createMadLib()"/>
+                    <input type="button" class="btn btn-danger" value="Create Madlib" onclick="createMadLib()" />
                 </div>
                 <!-- output element -->
                 <span id="mad-lib"></span>
@@ -140,25 +140,83 @@
                     Display multiples of 7 (1-30).
                 </p>
                 <div>
-                    <input type="button" class="btn btn-warning" value="Multiple of 7 Calculator" onclick="displaySeven()"/>
+                    <input type="button" class="btn btn-warning" value="Multiple of 7 Calculator" onclick="displaySeven()" />
                 </div>
                 <span id="multiple-seven"></span>
 
             </article>
-            <article class="col-md-4"><!-- Start here -->
+            <article class="col-md-4">
+                <!-- Start here -->
                 <h2>Celsius Converter</h2>
                 <p>
                     Celsius Converter to Fahrenheit.
                 </p>
                 <div>
-                    <input type="number" class="form-control" placeholder="Insert Celsius Temperature here." id="tbUserTemp"/>
+                    <input type="number" class="form-control" placeholder="Insert Celsius Temperature here." id="tbUserTemp" />
                 </div>
                 <div>
-                    <input typeof="button" class="btn btn-success" value="Convert to Fahrenheit" onclick="convertToF()"/>
+                    <input typeof="button" class="btn btn-success" value="Convert to Fahrenheit" onclick="convertToF()" />
                 </div>
                 <span id="display-f"></span>
             </article>
         </div>
+
+        <div class="row">
+            <article class="col-md-4">
+                <h2>Calculator</h2>
+                <p>
+                    Calculate!
+                </p>
+                <!-- Except user input -->
+                <div>
+                    <input type="number" class="form-control" placeholder="Insert number here" id="tbUserNumber" />
+                    <input type="number" class="form-control" placeholder="Insert number here" id="tbUserNbr" />
+                </div>
+                <!-- output button -->
+                <div>
+                    <input type="button" class="btn btn-danger" value="ADD" onclick="add()" />
+                </div>
+                <div>
+                    <input type="button" class="btn btn-warning" value="SUBTRACT" onclick="subtract()" />
+                </div>
+                <div>
+                    <input type="button" class="btn btn-success" value="MULTIPLY" onclick="multiply()" />
+                </div>
+                <div>
+                    <input type="button" class="btn btn-primary" value="DIVIDE" onclick="divide()" />
+                </div>
+                <!-- output element -->
+                <span id="answer"></span>
+            </article>
+            
+            <article class="col-md-4">
+                <h2>Advanced Calculator</h2>
+                <p>
+                    Calculate! but more advanced....
+                </p>
+                <!-- Except user input -->
+                <div>
+                    <input type="number" class="form-control" placeholder="Insert number here" id="tbUserNumberAdvanced" />
+                    <input type="number" class="form-control" placeholder="Insert number here" id="tbUserNbrAdvanced" />
+                </div>
+                <!-- output button -->
+                <div>
+                    <input type="button" class="btn btn-danger" value="ADD" id="btnAdd" />
+                </div>
+                <div>
+                    <input type="button" class="btn btn-warning" value="SUBTRACT" id="btnSub" />
+                </div>
+                <div>
+                    <input type="button" class="btn btn-success" value="MULTIPLY" id="btnMult" />
+                </div>
+                <div>
+                    <input type="button" class="btn btn-primary" value="DIVIDE" id="btnDiv" />
+                </div>
+                <!-- output element -->
+                <span id="answerAdvanced"></span>
+            </article>
+        </div>
+
 
     </main>
     <!--/Main Content-->

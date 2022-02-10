@@ -79,14 +79,19 @@
     <Content Include="img\pic1.jpg" />
     <Content Include="img\pic2.jpg" />
     <Content Include="img\pic3.jpg" />
+    <Content Include="contact.html" />
+    <Content Include="jqueryplugins.html" />
+    <Content Include="jqueryintro.html" />
     <Content Include="jslabs.html" />
     <Content Include="jsintro.html" />
     <Content Include="index.html" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquerycode.js" />
     <Content Include="js\labcode.js" />
     <Content Include="js\main.js" />
     <Content Include="js\npm.js" />
+    <Content Include="js\validation.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
