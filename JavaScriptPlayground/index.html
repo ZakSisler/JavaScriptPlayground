@@ -10,12 +10,12 @@
     <title>Home | JavaScript Playground</title>
 
     <!-- Bootstrap Theme -->
-    <link href="css/bootstrap-flatly-theme.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-flatly-theme.min.css" rel="stylesheet" id="theme" />
 
     <!--Custom CSS-->
     <link href="css/custom.css" rel="stylesheet" />
-	
-	<!--Favicon-->
+
+    <!--Favicon-->
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -86,6 +86,57 @@
     <div class="jumbotron">
         <div class="container">
             <h1>JavaScript Playground</h1>
+
+            <!-- Bootstrap Modal Button -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#cssModal">
+                Modify Current CSS Theme
+            </button>
+
+            <!-- Bootstrap Modal Content -->
+            <div class="modal fade" id="cssModal" tabindex="-1"
+                 role="dialog" aria-labelledby="CSSToggleModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-
+                                    dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="cssOptions">
+                                Select a
+                                theme
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                This button will call a JS function
+                                that will swap the 'href' value of the &lt;link&gt;
+                            </p>
+                            <div>
+                                <button class="btn btn-primary"
+                                        onclick="toggleTheme()">
+                                    Toggle Theme
+                                </button>
+                            </div>
+                            <hr />
+                            <p>
+                                Buttons below will pass an argument to
+                                a function to set the new theme.
+                            </p>
+                            <button class="btn btn-warning" onclick="setTheme('superhero')">Super Hero</button>
+                            <button class="btn btn-success" onclick="setTheme('flatly')">Flatly</button>
+                            <button class="btn btn-info" onclick="setTheme('darkly')">Darkly</button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-
+default" data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!--/Page Header-->
@@ -135,5 +186,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap 3.3.7 minified JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Dynamic Theme Script -->
+    <script src="js/dynamictheme.js"></script>
 </body>
 </html>

@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap-darkly-theme.css" />
+    <Content Include="css\bootstrap-superhero-theme.css" />
     <Content Include="css\bootstrap-flatly-theme.css" />
     <Content Include="css\bootstrap-flatly-theme.min.css" />
     <Content Include="css\custom.css" />
@@ -87,6 +89,7 @@
     <Content Include="index.html" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\dynamictheme.js" />
     <Content Include="js\jquerycode.js" />
     <Content Include="js\labcode.js" />
     <Content Include="js\main.js" />
